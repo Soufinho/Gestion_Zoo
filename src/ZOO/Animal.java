@@ -5,12 +5,14 @@ public class Animal {
     private String style_marche;
     private String bruit;
     private String manger;
+    private int age;
 
     public Animal(String name, String style_marche, String bruit, String manger) {
         this.name = name;
         this.style_marche = style_marche;
         this.bruit = bruit;
         this.manger = manger;
+        this.age = age;
     }
 
     public String getName() {
@@ -25,17 +27,10 @@ public class Animal {
     public String getManger() {
         return manger;
     }
-    public void setName(String name) {
-        this.name = name;
+
+    public int getAge() {
+        return age;
     }
-    public void setStyle_marche(String style_marche) {
-        this.style_marche = style_marche;
-    }
-    public void setBruit(String bruit) {
-        this.bruit = bruit;
-    }
-    public void setManger(String manger) {
-        this.manger = manger;
-    }
+
 
 }
