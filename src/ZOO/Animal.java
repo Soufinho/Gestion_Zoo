@@ -1,4 +1,9 @@
 package ZOO;
+import ZOO.Enclos;
+import ZOO.Lion;
+import ZOO.Serpent;
+import ZOO.Oiseau;
+import ZOO.Soigneur;
 
 public class Animal {
     private String name;

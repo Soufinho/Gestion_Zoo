@@ -1,30 +1,21 @@
 package Application;
+import ZOO.Animal;
+import ZOO.Enclos;
+import ZOO.Lion;
+import ZOO.Serpent;
+import ZOO.Oiseau;
+import ZOO.Soigneur;
 
-import java.util.ArrayList;
 
 public class Appli {
 
     public static void main(String[] args) {
-        ArrayList<String> lion = new ArrayList<>();
-        lion.add("Lion");
-        lion.add("10");
-        lion.add("marche majestueusement");
-        lion.add("ROOAAAARRR");
-        lion.add("Carnivore");
 
-        ArrayList<String> oiseau = new ArrayList<>();
-        oiseau.add("Oiseau");
-        oiseau.add("4");
-        oiseau.add("vol");
-        oiseau.add("cui cui cui");
-        oiseau.add("insectivore");
+        Animal animal1 = new Animal();
 
-        ArrayList<String> serpent = new ArrayList<>();
-        serpent.add("Serpent");
-        serpent.add("6");
-        serpent.add("rampe");
-        serpent.add("SSSSSSSSSSSSS");
-        serpent.add("carnivore");
+        Soigneur soigneur1 = new Soigneur();
+
+        Enclos enclos1 = new Enclos();
 
     }
 }

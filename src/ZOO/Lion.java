@@ -13,4 +13,14 @@ public class Lion extends Animal {
         System.out.println("Sexe : " + getBruit());
         System.out.println("Mode de déplacement : " + getStyle_marche());
     }
+
+    public void lionBruit(){
+        System.out.println("Le lion rugi!");
+        System.out.println("ROOOAAAAARRRRR!!!");
+    }
+
+    public void lionMarche(){
+        System.out.println("Le lion marche!");
+
+    }
 }
