@@ -1,9 +1,11 @@
 package ZOO;
 
 public class Serpent extends Animal {
-    public Serpent(String name, String style_marche, String bruit, String manger) {
-        super(name, style_marche, bruit, manger);
+    public Serpent(String name,int age) {
+        super(name, age);
     }
+
+
 
     public void afficherSerpent() {
         System.out.println("Animal : " + getName());
@@ -11,5 +13,15 @@ public class Serpent extends Animal {
         System.out.println("Âge : " + getAge() + " ans");
         System.out.println("Sexe : " + getBruit());
         System.out.println("Mode de déplacement : " + getStyle_marche());
+    }
+
+    @Override
+    public void faireBruit() {
+        System.out.println(getName() + " siffle !");
+    }
+
+    @Override
+    public void seDeplacer() {
+        System.out.println(getName() + " rampe discrètement.");
     }
 }

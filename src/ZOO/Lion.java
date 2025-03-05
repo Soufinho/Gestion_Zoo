@@ -2,8 +2,8 @@ package ZOO;
 
 public class Lion extends Animal {
 
-    public Lion(String name, String style_marche, String bruit, String manger) {
-        super(name, style_marche, bruit, manger);
+    public Lion(String name,int age) {
+        super(name, age);
     }
 
     public void afficherLion() {
@@ -14,13 +14,13 @@ public class Lion extends Animal {
         System.out.println("Mode de déplacement : " + getStyle_marche());
     }
 
-    public void lionBruit(){
-        System.out.println("Le lion rugi!");
-        System.out.println("ROOOAAAAARRRRR!!!");
+    @Override
+    public void faireBruit() {
+        System.out.println(getName() + " rugit !");
     }
 
-    public void lionMarche(){
-        System.out.println("Le lion marche!");
-
+    @Override
+    public void seDeplacer() {
+        System.out.println(getName() + " marche majestueusement.");
     }
 }

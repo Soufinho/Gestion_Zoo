@@ -1,23 +1,18 @@
 package ZOO;
-import ZOO.Enclos;
-import ZOO.Lion;
-import ZOO.Serpent;
-import ZOO.Oiseau;
-import ZOO.Soigneur;
 
-public class Animal {
+public abstract class Animal {
     private String name;
     private String style_marche;
     private String bruit;
     private String manger;
     private int age;
 
-    public Animal(String name, String style_marche, String bruit, String manger) {
+    public Animal(String name, int age) {
         this.name = name;
         this.style_marche = style_marche;
         this.bruit = bruit;
         this.manger = manger;
-        this.age = age;
+        this.age = this.age;
     }
 
     public String getName() {
@@ -37,5 +32,11 @@ public class Animal {
         return age;
     }
 
+    public void realiserSpectacle() {
+        faireBruit();
+        seDeplacer();
+    }
+    public abstract void faireBruit();
+    public abstract void seDeplacer();
 
 }

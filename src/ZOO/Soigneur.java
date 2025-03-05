@@ -1,22 +1,25 @@
 package ZOO;
 
+import java.util.Random;
+
 public class Soigneur {
     private String nom;
-    private String prenom;
     private String specialite;
 
-    public Soigneur(String nom, String prenom, String specialite) {
+    public Soigneur(String nom, String specialite) {
         this.nom = nom;
-        this.prenom = prenom;
         this.specialite = specialite;
     }
 
-    public void diagnostic(){
-        System.out.println(nom + " " + prenom + " réalise un diagnostique.");
-
+    public void diagnostiquerAnimal(Animal animal) {
+        if (new Random().nextBoolean()) {
+            System.out.println(nom + " a diagnostiqué une maladie pour " + animal.getName());
+        } else {
+            System.out.println(nom + " n'a trouvé aucune maladie pour " + animal.getName());
+        }
     }
 
-    public void soigner(){
-
+    public void soignerAnimal(Animal animal) {
+        System.out.println(nom + " soigne " + animal.getName());
     }
 }
