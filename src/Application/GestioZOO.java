@@ -38,9 +38,12 @@ public class GestioZOO {
             System.out.println("1. Ajouter un animal");
             System.out.println("2. Ajouter un soigneur");
             System.out.println("3. Ajouter un visiteur");
-            System.out.println("4. Afficher l'état du zoo");
-            System.out.println("5. Passer une journée");
-            System.out.println("6. Retour au menu principal");
+            System.out.println("4. Ajouter un enclos");
+            System.out.println("5. Afficher l'état du zoo");
+            System.out.println("6. Passer une journée");
+            System.out.println("7. Diagnostiquer et Soigner un animal");
+            System.out.println("8. Nettoyer un enclos");
+            System.out.println("9. Retour au menu principal");
             System.out.print("Votre choix : ");
 
             int choix = scanner.nextInt();
@@ -49,9 +52,12 @@ public class GestioZOO {
                 case 1 -> zoo.ajouterAnimal();
                 case 2 -> zoo.ajouterSoigneur();
                 case 3 -> zoo.ajouterVisiteur();
-                case 4 -> zoo.afficherEtatZoo();
-                case 5 -> zoo.gestionJournee();
-                case 6 -> gestion = false;
+                case 4 -> zoo.ajouterEnclos();
+                case 5 -> zoo.afficherEtatZoo();
+                case 6 -> zoo.gestionJournee();
+                case 7 -> zoo.soignerAnimal();
+                case 8 -> zoo.nettoyerEnclos();
+                case 9 -> gestion = false;
                 default -> System.out.println("Choix invalide.");
             }
         }

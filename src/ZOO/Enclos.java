@@ -1,26 +1,45 @@
 package ZOO;
 
 public class Enclos {
-    private String nom;
+    private static String nom;
     private int capacite;
-    private int propreté = 100;
+    private static int proprete = 100;
 
-    public Enclos(String nom, int capacite) {
+    public Enclos(String nom) {
         this.nom = nom;
         this.capacite = capacite;
     }
 
     public void degrader() {
-        propreté -= 10;
-        if (propreté < 0) propreté = 0;
+        proprete -= 10;
+        if (proprete < 0) proprete = 0;
     }
 
     public void nettoyer() {
-        propreté = 100;
+        proprete = 100;
         System.out.println("L'enclos " + nom + " a été nettoyé.");
     }
 
     public int getProprete() {
-        return propreté;
+        return proprete;
     }
+
+    public void setProprete(int proprete) {
+        this.proprete = proprete;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public int getCapacite() {
+        return capacite;
+    }
+
+
+    public static void degraderProprete() {
+        if (proprete > 0) {
+            proprete -= 10;
+            System.out.println("L'enclos " + nom + " se dégrade. Propreté : " + proprete + "%");
+        }    }
 }
